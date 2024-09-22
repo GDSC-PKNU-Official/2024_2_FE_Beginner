@@ -104,3 +104,43 @@ p(포괄적)->class->id(구체적)
 우선순위
 ld->class->p
 =모든 <p>태그를 가리키는 선택자 보다 id의 값이 ~인 태그만을 가리키는 선택자가 우선순위가 높다
+
+position 속성 요약
+
+-position html 요소의 위치를 결정하는 속성
++ 속성값은 5개가 있다( static, relative, absolute, fixed, stcky)
++top, bottom, left, righ 의 속성과 함꼐 쓰인다
++속성의 기본 값은 static이다
+
+1. position: static;
++속성의 기본값
++html 작성 순서 그대로(원래 위치)
++top, bottom, left, righ 속성 무시
+
+2. position: relative;
++원래의 위치 기준으로 이동
++top, bottom, left, righ는 원위치 기준 이동
++부모 태그가 이동하면 같이 따라감
++바로 상위 태그를 참고해서 top, bottom, left, righ
+
+3. position: absolute;
++부모 태그 기준
++top, bottom, left, righ는 부모 태그 기준 이동
++부모 태그는 static이 아닌 (가장 가까운)부모태그의 위치를 참조 
+(부모 태그 속성값은 주로 relative 사용)
++static이 아닌 (가장 가까운)부모태그가 없다면 body가 기준이 됨
++상위 태그 중에서 static이 아닌 태그를 참고해서 top, bottom, left, righ
++다른 요소와 독립적으로 작용(상호작용x)
+(=absolute이 적용된 요소는 붕 뜨고 다음 요소가 순서로 올라옴)
+
+4. position: fixed;
++ 부모태그 무시
++전체 화면 기준
++top, bottom, left, righ는 전체 화면 기준 이동
++ 스크롤 무시(위치 고정)
++다른 요소와 독립적으로 작용(상호작용x)
+(=fixed이 적용된 요소는 붕 뜨고 다음 요소가 순서로 올라옴)
+
+5. position:  stcky;
++원래 위치 따라감
++스크롤할때 지정된 위치로 오면 딱 붙어서 고정
