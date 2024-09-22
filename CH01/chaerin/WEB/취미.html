@@ -3,19 +3,58 @@
 <head>
   <title>gimchaerin - Welcome</title>
   <meta charset="utf-8">
+  <style>
+    a {
+      color: rgb(40, 40, 40);
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 80px;
+      text-align: center;
+      border-bottom: 3px dotted rgb(40, 131, 82);
+      margin: 0;
+      padding: 20px;
+    }
+    ol{
+      border-right: 3px dotted rgb(40, 131, 82);
+      width: 80px;
+      margin: 0;
+      padding: 20px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+    }
+    #grid ol {
+      padding: 25px
+    }
+    #본문 {
+      padding: 20px;
+    }
+    @media (max-width:800px){
+      #grid {display: block;}
+      ol {border-right: none;}
+      h1 {border-bottom: none;}
+    }
+  </style>
 </head>
 <body>
-  <h1><a href="자기소개서.html">자기소개서</a></h1>
-  <ol>
+   <h1><a href="자기소개서.html">자기소개서</a></h1>
+  <div id="grid">
+   <ol>
     <li><a href="취미.html">취미</a></li>
     <li><a href="호두마루.html">호두마루</a></li>
-  </ol>
-  <h2>취미</h2>
-  <p>
+   </ol>
+  
+   <div id="본문">
+    <h2>취미</h2>
+    <p>
     저의 취미는 사진 촬영입니다. 여행이나 놀러나가면 항상 카메라를 가지고 다닙니다.
- </p>
- <img src=하늘.jpg>
- <img src="곤돌라.jpg">
- <img src="풍경.jpg">
+    </p>
+    <img src=하늘.jpg>
+    <img src="곤돌라.jpg">
+    <img src="풍경.jpg">
+   </div>
+  </div>
 </body>
 </html>
