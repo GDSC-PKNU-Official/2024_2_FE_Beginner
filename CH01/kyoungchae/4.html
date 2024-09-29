@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우경채 맞추기 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #5b4caf;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #5b4caf;
+        }
+        .result {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1><u>경채를 맞춰봐~</u></h1>
+
+<div class="question" id="question1">
+    <p>1. 우경채가 싫어하는 채소는?</p>
+    <input type="radio" name="q1" value="모기버섯"> 모기버섯<br>
+    <input type="radio" name="q1" value="당근"> 당근<br>
+    <input type="radio" name="q1" value="청경채"> 청경채<br>
+</div>
+
+<div class="question" id="question2">
+    <p>2. 우경채가 안해본 알바는?</p>
+    <input type="radio" name="q2" value="우유배달"> 우유배달<br>
+    <input type="radio" name="q2" value="졸업자취업현황조사"> 졸업자취업현황조사<br>
+    <input type="radio" name="q2" value="카페"> 카페<br>
+</div>
+
+<div class="question" id="question3">
+    <p>3. 우경채가 가장 좋아하는 음식은?</p>
+    <input type="radio" name="q3" value="떡볶이"> 떡볶이<br>
+    <input type="radio" name="q3" value="삼겹살"> 삼겹살<br>
+    <input type="radio" name="q3" value="김밥"> 김밥<br>
+</div>
+
+<button class="btn" onclick="submitQuiz()">퀴즈 제출</button>
+
+<div class="result" id="result"></div>
+
+<script>
+    function submitQuiz() {
+        // 정답 설정
+        let correctAnswers = {
+            q1: "당근",
+            q2: "우유배달",
+            q3: "김밥"
+        };
+
+        // 사용자가 선택한 답변 가져오기
+        let userAnswers = {
+            q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "",
+            q2: document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "",
+            q3: document.querySelector('input[name="q3"]:checked') ? document.querySelector('input[name="q3"]:checked').value : ""
+        };
+
+        // 점수 계산
+        let score = 0;
+        for (let key in correctAnswers) {
+            if (correctAnswers[key] === userAnswers[key]) {
+                score++;
+            }
+        }
+
+        // 결과 출력
+        let resultText = "총 " + score + "개 맞췄습니다!";
+        document.getElementById("result").textContent = resultText;
+    }
+</script>
+
+</body>
+</html>
