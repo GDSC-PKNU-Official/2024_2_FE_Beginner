@@ -1,4 +1,4 @@
-<style>
+
         body{
             margin:10;
         }
@@ -24,7 +24,8 @@
                 margin: 30;}
             h4{border-right: 1px solid gray;
             width: 350px;
-            margin:0;
+            margin:20;
+            line-height: 170%;
             padding: 20px;}
             #grid{
                 display:grid;
@@ -40,4 +41,4 @@
             }
 
 
-            </style>
+       
