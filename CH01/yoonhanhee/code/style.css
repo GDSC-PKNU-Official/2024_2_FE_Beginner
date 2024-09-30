@@ -26,12 +26,12 @@ a{
   h2{
     font-size: 30px;
   }
-  #소개,#기본정보,#인사말 img{
+  #소개,#기본정보,#인사말,#퀴즈 {
     padding:10px;
     padding-left: 0px;
     padding-top: 19px;
   }
-  #grid #소개,#기본정보,#인사말{
+  #grid #소개,#기본정보,#인사말,#퀴즈{
     padding-left: 30px;
   }
   @media(max-width:650px){
@@ -54,4 +54,8 @@ a{
     img{
       width:90%;
     }
+  }
+  button{
+    width: 200px;
+    height: 100px;
   }
