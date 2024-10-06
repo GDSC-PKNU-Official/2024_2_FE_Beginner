@@ -1,0 +1,10 @@
+#submit{
+    padding: 20px;
+    padding-left: 80px;
+    padding-bottom: 5px;
+}
+
+#scoreDisplay{
+    margin-top: 2px;
+    background-color: yellow;
+}
