@@ -33,7 +33,5 @@
 - css에 대해 알기
 - 속성을 주고자하는 태그가 누구인지를 알기
 ### 제어할 태그 선택하기
-- selector :(". myclass")
-- 
-- 
- 
+- document.querySelector('body').style.backgroundColor = 'black'; :백그라운드 컬러는 검은색
+-  document.querySelector('body').style.color = 'white'; :모든 스타일 색상은 하얀색
