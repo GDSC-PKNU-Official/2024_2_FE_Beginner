@@ -1,23 +1,55 @@
-<h1><a href="index.html">Who am I</a></h1>
- 
+<!doctype html>
+<html>
+<head>
+  <title>자기소개서</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<h1 style="background-color:black;color:powderblue;">WHO I AM</a></h1>
+  <p>
+    <p>사용자 배경설정
+<input type="button" value="Dark" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+">
+<input type="button" value="Light" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+">
   <ol>
-    <li><a href="1.html">전공</a></li>
-    <li><a href="2.html">경력</a></li>
-    <li><a href="3.html">활동</a></li>
+    <h4><li><a href="1.html">전공</a></li></h4>
+    <h4><li><a href="2.html">경력</a></li></h4>
+    <h4><li><a href="3.html">활동</a></li></h4>
   </ol>
-  <h2>JavaScript</h2>
+
   <p>
     안녕하세요  <strong><u>GDSC프론트엔드 비기너 김민기</u></strong> 입니다. </p> 
 <p>저는 국립부경대학교 공과대학 전기공학부 제어계측공학을 전공하고있습니다
   </p>
 
-  
+  <img src="https://developers.google.com/community/gdsc/images/gdsc-social-share.png?hl=ko" width="100%">
+  <script>
+    var coworkers = ['경채','부경',];
+  </script>
+  <h2>Co workers</h2>
+  <ul>
+    <script>
+      var i = 0;
+      while(i < coworkers.length){
+        document.write('<li><a href="http://127.0.0.1:5500/2024_2_FE_Beginner/CH01/kyoungchae/1.html'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+        i = i + 1;
+      }
+    </script>
+</ul>
 <h1>Guess me</h1>
 <div id="quiz"> </div>
      <button id="submit" style="border:1px solid tomato; margin:2px; border-radius:5px; color:tomato;"> Submit </button>
 <div id="result"> </div>
 
+<input type="button" value="구독" onclick="alert('구독되었습니다')">
 
+<P>
+<input type="text"value="전화번호" onchange="alert('전화번호를 저장하였습니다')">
+<input type="text"value="학번" onkeydown="alert('학번을 저장하였습니다')">
 <script>
 
 const quizData = [
