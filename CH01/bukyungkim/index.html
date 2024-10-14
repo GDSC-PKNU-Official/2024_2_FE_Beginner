@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIM BU KYUNG</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1><a href="index.html" 
+        >ABOUT ME!</a></h1>
+       <input type="button" value="night"onclick="
+       var target =document.querySelector('body')
+       if (this.value === 'night' ){
+           target.style.backgroundColor = 'black';
+           target.style.color = 'white';
+            this.value = 'day'
+        }else{
+           target.style.backgroundColor = 'white';
+           target.style.color = 'black';
+           this.value = 'night'
+        }
+       ">
+    <h2><strong>KIM BU KYUNG</strong></h2>
+    <div id="grid">
+        <h4>
+            <ul>
+                <li>출생:    2003.05.20 부산광역시</li>
+                <li>학력:    부경대학교 시가디자인학과 재학</li>
+                <li>이메일:  qnrud8637@gmail.com</li>
+                <li><strong><a href="1.html"
+
+                class="saw"><input type="button" value="KEYWORDS" onclick="alert('김부경의 키워드를 알아봐요!')"></a></strong></li>
+        
+                <li>#조용함 #신중함 #혼자놀기 #투명함 #물 </li>
+                <li><strong>취미</strong></li>
+                <li>고양이 카페 가기, 강아지 카페 가기, 만화 보기, 걷기</li>
+                <li><strong><a href="2.html" class="saw"><input type="button" value="-> QUIZ" onclick="alert('만점에 도전하세요!')"></a></strong></li>
+                <li> <br>
+                    <input type="text" id="textInput" placeholder="김부경에게 하고싶은 말" />
+                    <p id="inputMessage">입력된 내용이 여기에 나타납니다.</p>
+                    <script>
+                         document.getElementById("textInput").oninput = function() {
+                            document.getElementById("inputMessage").innerHTML = "입력된 내용: " + this.value;}
+                    </script>
+                </li>
+            </ul>
+            
+        </h4>
+        <div>  
+            <img src="김부경 프로필.png" width="80%">
+            <br>
+            안녕하세요.부경대학교 23학번 김부경입니다.
+            <br>
+            GDSC프론트앤드 비기너 스터디에 열심히 임하면서 
+            멋있는 웹사이트를 만들고 싶습니다.
+            <br>
+            감사합니다.^^
+           
+        </div> 
+    </div>
+    
+</body>
+</html>

@@ -3,22 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIM BU KYUNG</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>김부경 퀴즈</title>
+    <style>
+        a{color:black;
+                text-decoration:none;
+                text-align: center;
+            }
+            
+        body {
+            margin: 50px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: hsl(239, 39%, 49%);
+            color: white;
+            border: none;
+        }
+        .btn:hover {
+            background-color: hsl(239, 39%, 49%);
+            
+        }
+        .result {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+           
+        }
+    </style>
 </head>
 <body>
-    <h1><a href="1.html">ABOUT ME!</a></h1>
-    <h2><strong>KIM BU KYUNG</strong></h2>
-    <p><strong><a href="2.html">KEYWORDS</a></strong></p>
-         
-    <p> #조용함 #신중함 #혼자놀기 #투명함 #물 </p>
-    <img src="조용함.jpg" width="80%">
-    <img src="고민1.jpg" width="80%">
-    <img src="혼자 놀기1.jpg" width="80%">
-    <img src="투명함1.jpg" width="80%">
-    <img src="물2.jpg" width="80%">
+    <h1><a href="index.html" 
+        >ABOUT ME!</a></h1>
 
-     
+<h1>김부경을 맞춰라!</h1>
+
+<div class="question" id="question1">
+    <p>1. 김부경은 어떤 전공인가요?</p>
+    <input type="radio" name="q1" value="컴퓨터공학전공"> 컴퓨터공학전공<br>
+    <input type="radio" name="q1" value="시각디자인전공"> 시각디자인전공<br>
+</div>
+
+<div class="question" id="question2">
+    <p>2. 김부경의 취미는 무엇일까요?</p>
+    <input type="radio" name="q2" value="고양이 카페 가기"> 고양이 카페 가기<br>
+    <input type="radio" name="q2" value="독서하기"> 독서하기<br>
+</div>
+
+<div class="question" id="question3">
+    <p>3. 김부경은 어떤 성격인가요?</p>
+    <input type="radio" name="q3" value="조용한 성격"> 조용한 성격<br>
+    <input type="radio" name="q3" value="발랄한 성격"> 발랄한 성격<br>
+</div>
+
+<button class="btn" onclick="submitQuiz()">퀴즈 제출</button>
+
+<div class="result" id="result"></div>
+
+<script>
+    function submitQuiz() {
+       
+        let correctAnswers = {
+            q1: "시각디자인전공",
+            q2: "고양이 카페 가기",
+            q3: "조용한 성격"
+        };
+        let userAnswers = {
+            q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "",
+            q2: document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "",
+            q3: document.querySelector('input[name="q3"]:checked') ? document.querySelector('input[name="q3"]:checked').value : ""
+        };
+
+        let score = 0;
+        for (let key in correctAnswers) {
+            if (correctAnswers[key] === userAnswers[key]) {
+                score++;
+            }
+
+        }
+        let resultText = score + "개 맞췄습니다";
+        document.getElementById("result").textContent = resultText;
+    }
     
+</script>
 </body>
 </html>
