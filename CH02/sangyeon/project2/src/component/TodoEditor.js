@@ -16,7 +16,7 @@ const TodoEditor = ({onCreate}) => {
         setContent("");
     };
     const onKeyDown = (e) => {
-        if(e.keyCOde === 13) {
+        if(e.keyCode === 13) {
             onSubmit();
         }
     }

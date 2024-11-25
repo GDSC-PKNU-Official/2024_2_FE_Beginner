@@ -1,21 +1,19 @@
-import { useState, useRef } from "react"; // useRef 추가
+import { useState, useRef } from "react";
 import "./TodoEditor.css";
 
 const TodoEditor = ({ onCreate }) => {
   const [content, setContent] = useState(""); 
-  const inputRef = useRef(); // useRef 선언
-
-  const onChangeContent = (e) => {
+  const inputRef = useRef();
+  const onChangeContent = (e) => { 
     setContent(e.target.value);
   };
-
-  const onSubmit = () => { // 함수 구조 수정
+  const onSubmit = () => {
     if (!content) { 
       inputRef.current.focus();
       return;
     }
     onCreate(content);
-    setContent(""); 
+    setContent("");
   };
   const onKeyDown = (e) => { 
     if (e.keyCode === 13) {
@@ -24,7 +22,7 @@ const TodoEditor = ({ onCreate }) => {
   };
   return(
     <div className="TodoEditor">
-      <h4>새로운 Todo 작성하기 ✏ </h4>
+      <h4>새로운 Todo 작성하기 ✏️ </h4>
       <div className="editor_wrapper">
         <input
           ref={inputRef}
@@ -39,4 +37,3 @@ const TodoEditor = ({ onCreate }) => {
   )
 };
 export default TodoEditor;
- 

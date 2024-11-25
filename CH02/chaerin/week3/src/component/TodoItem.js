@@ -1,26 +1,28 @@
 import "./TodoItem.css";
 
-const TodoItem = ({ id, content, isDone, createdDate, onUpdate, onDelete }) => { 
+const TodoItem = ({ id, content, isDone, createdDate, onUpdate, onDelete }) => {
   const onChangeCheckbox = () => {
     onUpdate(id);
-  };
+   };
   const onClickDelete = () => { 
-    onDelete(id);
-  };
+      onDelete(id);
+   };
 
   return (
     <div className="TodoItem">
       <div className="checkbox_col">
-        <input onChange={onChangeCheckbox} checked={isDone} type="checkbox" />
+       <input onChange={onChangeCheckbox}
+             checked={isDone} type="checkbox" />
       </div>
       <div className="title_col">{content}</div>
       <div className="date_col">
         {new Date(createdDate).toLocaleDateString()}
       </div>
       <div className="btn_col">
-        <button onClick={onClickDelete}>삭제</button> 
+      <button onClick={onClickDelete}>삭제</button>
       </div>
     </div>
   );
 };
 export default TodoItem;
+// 체크박스 완료 상태 변경과 삭제, 투두리스트와 부모 컴포넌트 관계 props로 연결
