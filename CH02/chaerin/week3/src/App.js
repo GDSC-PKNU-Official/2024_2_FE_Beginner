@@ -32,7 +32,6 @@ function App() {
   const onCreate = (content) => {
         const newItem = {
           id: idRef.current,
-          id: 0,
           content,
           isDone: false,
           createdDate: new Date().getTime(),
