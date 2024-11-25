@@ -1,16 +1,26 @@
-import TodoItem from "./TodoItem";
-import "./TodoList.css";
+import "./TodoItem.css";
 
-const TodoList = ({ todo }) => {
+const TodoItem = ({ id, content, isDone, createdDate, onUpdate, onDelete }) => { 
+  const onChangeCheckbox = () => {
+    onUpdate(id);
+  };
+  const onClickDelete = () => { 
+    onDelete(id);
+  };
+
   return (
-    <div className="TodoList">
-      (...)
-      <div className="list_wrapper">
-        {todo.map((it) => (
-          <TodoItem key={it.id} {...it} /> 
-        ))}
+    <div className="TodoItem">
+      <div className="checkbox_col">
+        <input onChange={onChangeCheckbox} checked={isDone} type="checkbox" />
+      </div>
+      <div className="title_col">{content}</div>
+      <div className="date_col">
+        {new Date(createdDate).toLocaleDateString()}
+      </div>
+      <div className="btn_col">
+        <button onClick={onClickDelete}>삭제</button> 
       </div>
     </div>
   );
 };
-export default TodoList;
+export default TodoItem;
