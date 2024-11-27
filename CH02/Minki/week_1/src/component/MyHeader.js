@@ -5,3 +5,5 @@ function MyHeader() {
       </header>
     );
   }
+
+export default MyHeader;
