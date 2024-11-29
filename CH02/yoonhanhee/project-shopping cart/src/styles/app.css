@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f9f9f9;
+    --header-bg: #f1f1f1;
+    --border-color: #dddddd;
+  }
+  
+  body.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --header-bg: #2c2c2c;
+    --border-color: #333333;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .app {
+    min-height: 100vh;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .cart-page {
+    padding: 20px;
+  }
+  
+  button {
+    padding: 6px 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2196F3;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
