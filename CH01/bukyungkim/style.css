@@ -1,0 +1,44 @@
+
+        body{
+            margin:10;
+        }
+        a{color:black;
+                text-decoration:none;
+                text-align: center;
+            }
+           .saw{
+                color:gray;
+           }
+           #active{
+            color:gray;
+           }
+            h1{
+                border-bottom: 1px solid gray;
+                margin: 0;
+               padding:20px;
+               font-size:32px; 
+              text-align: center;
+              
+            }
+            h2{text-align: center;
+                margin: 30;}
+            h4{border-right: 1px solid gray;
+            width: 350px;
+            margin:20;
+            line-height: 170%;
+            padding: 20px;}
+            #grid{
+                display:grid;
+                grid-template-columns:400px 1fr ;
+            }
+            @media(max-width:800px){
+                #grid{
+                    display:block;
+                }
+                h4{border-right:none;
+
+                }
+            }
+
+
+       

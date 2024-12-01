@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+    margin-bottom: 130px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.saw {
+    color: gray;
+}
+
+h1 {
+    font-size: 65px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    border-bottom: 2px solid gray;
+    padding: 15px;
+    font-size: 40px;
+    margin: 20px;
+    padding: 50px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center; /* p 태그의 텍스트 중앙정렬 */
+    margin: 20px 0; /* 간격 조정 */
+}
+
+h1, h2, h4, p {
+    text-align: center;
+}
+
+ul {
+    border-right: 1px solid gray;
+    width: 200px;
+    margin: 0; /* 수평 중앙정렬을 위한 여백 제거 */
+    padding: 70px;
+    text-align: left; /* 링크가 왼쪽 정렬되도록 */
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 두 개의 열을 1:1 비율로 설정 */
+    justify-items: center; /* 모든 항목을 중앙에 배치 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    gap: 20px; /* 항목들 사이에 간격 추가 */
+}
+
+img {
+    width: 45%; /* 이미지 크기 조정 */
+    display: block;
+    padding: 70px;
+    margin-right: 250px;
+}
+
+@media (max-width: 800px) {
+    #grid {
+        display: block;
+    }
+
+    ul {
+        border-right: none;
+    }
+
+    h2 {
+        border-bottom: none;
+    }
+}
+
+body {
+    background-color: white; /* 초기 배경색 */
+    color: black; /* 텍스트 색상 */
+    text-align: right;
+    transition: background-color 0.5s ease; /* 부드러운 전환 효과 */
+}
+button {
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-left: auto; /* 버튼을 오른쪽으로 이동 */
+    margin-right: 30px; /* 오른쪽 여백 설정 */
+    display: block; 
+}
