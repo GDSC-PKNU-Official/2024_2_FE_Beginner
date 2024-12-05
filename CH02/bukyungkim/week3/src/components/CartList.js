@@ -21,34 +21,22 @@ const CartList = () => {
       {state.items.length === 0 ? (
         <p>장바구니가 비어있습니다.</p>
       ) : (
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>상품</th>
-                <th>가격</th>
-                <th>수량</th>
-                <th>총액</th>
-                <th>삭제</th>
-              </tr>
-            </thead>
-            <tbody>
-              {state.items.map(item => (
-                <CartItem 
-                  key={item.id} 
-                  item={item} 
-                  onRemove={handleRemove} 
-                  onQuantityChange={handleQuantityChange} 
-                />
-              ))}
-            </tbody>
-          </table>
-          <TotalPrice />
-          <CheckoutButton />
+        <div className="product-grid"> 
+          {state.items.map(item => (
+            <CartItem 
+              key={item.id} 
+              item={item} 
+              onRemove={handleRemove} 
+              onQuantityChange={handleQuantityChange} 
+            />
+          ))}
         </div>
       )}
+      <TotalPrice />
+      <CheckoutButton />
     </div>
   );
 };
 
 export default CartList;
+        
