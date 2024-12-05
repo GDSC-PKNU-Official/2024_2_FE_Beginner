@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+### 비기너 커리큘럼 마지막 과제로 만든 쇼핑 앱 입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+상품은 4개로 만들었고 사진은 동기들이 추천해준 상품으로 넣었습니다.
 
-In the project directory, you can run:
+## 기능
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+밤낮 모드로 전환 가능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+상품박스 호버시 상품박스 커지기
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+버튼 호버시 컬러변경
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+상품 사진, 상품 가격, 수량선택, 카트 담기
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+카트 담으면 상품이 담겼다는 알림
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+상품 리스트에서 장바구니로 이동하는 링크
 
-### `npm run eject`
+징비구니에 총가격 표시
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+결제버튼
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+장바구니에서 수량변경 및 삭제 가능
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+결제 알림
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+결제 후 장바구니가 비었다는 글 표시
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+장바구니에서 상품리스트로 돌아가는 링크
