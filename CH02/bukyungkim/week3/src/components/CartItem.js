@@ -12,7 +12,7 @@ const CartItem = ({ item, onRemove, onQuantityChange }) => {
           ))}
         </select>
       </td>
-      <td>{(item.price * item.quantity).toLocaleString()}원</td>
+      <td>{(item.price * item.quantity).toLocaleString()}원</td> 
       <td>
         <button onClick={() => onRemove(item.id)}>삭제</button>
       </td>
